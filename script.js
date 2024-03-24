@@ -19,7 +19,6 @@ brand.addEventListener('mouseover', () => {
     dot.classList.toggle('span-move')
     // Change its background color
   });
-
 brand.addEventListener('mouseleave', () => {
 dot.classList.remove('span-move');
 });
@@ -63,137 +62,95 @@ dropbtn.addEventListener('click', () => {
     // Change its background color
   });
 
-
-
-
-
 // -------- Iframe START--------
-  const mapIframe = document.getElementById("mapIframe")
-  const flipIframe = document.getElementById("flipIframe")
-  const iframeMapDiv = document.querySelector(".iframe-map-container")
-  const iframeFlipDiv = document.querySelector(".iframe-flip-container")
-  const worldMapDiv= document.querySelector(".world-map-div")
-  const imgMapTrigger = document.querySelector('#world-map-img')
-  const flipCardDiv= document.querySelector(".flip-card-div")
 
-  const imgFlipTrigger = document.querySelector('#flip-card-img')
-  const h1FlipCard = document.querySelector("#h1FlipCard")
+// & -----------Adding constants-------------
+// World map const
+const worldMapDiv= document.querySelector(".worldMap-div")
+const imgMapTrigger = document.querySelector('#worldMap-img')
+const iframeMapDiv = document.querySelector(".iframe-worldMap-container")
+const worldMapiFrame = document.getElementById("worldMapiFrame")
+// Music player const
+const musicPlayerDiv= document.querySelector(".musicPlayer-div")
+const imgMusicPlayerTrigger = document.querySelector('#musicPlayer-img')
+const iFrameMusicPlayerDiv = document.querySelector(".iframe-musicPlayer-container")
+const musicPlayeriFrame = document.getElementById("musicPlayeriFrame")
 
 
-  // ---Iframe MAP START ---
-    // Iframe MAP visibility
+ 
+//^ -------------START Create classes/re-usabale functions-------------
+class iFrameApp{
+  // ~-----------Constructor legend - substitute App with the app name added in HTML----------
+    // ~iFrameAppCont = app-div
+    // ~appDiv = iFrame-app-container
+    // ~appIframe = appIframe 
+    // ~imgAppTrigger = app-img
+    
+  constructor(appDiv,imgAppTrigger,iFrameAppDiv,appiFrame,app){
 
-    // Creates a function to remove the visibility and exapnded class
-    function removeIframeMapVis() {
-      if (iframeMapDiv) {
-        iframeMapDiv.classList.remove('iframe-visibility');
-        worldMapDiv.classList.remove('expanded')
-      }
+    this.appDiv = appDiv;
+    this.imgAppTrigger = imgAppTrigger;
+    this.iFrameAppDiv = iFrameAppDiv;
+    this.appiFrame = appiFrame;
+    this.app = app;
+
+    // bind expand to constructor
+    this.imgAppTrigger.addEventListener('click', this.handleClick.bind(this));
+    // bind resize to constructor
+    window.addEventListener('resize', this.handleResize.bind(this))
+    // bind load event to constructor
+    this.appiFrame = appiFrame.addEventListener('load', this.handleiFrameLoad.bind(this))
+  }
+  removeIframeAppVis(iFrameAppDiv) {
+    if (iFrameAppDiv) {
+      this.iFrameAppDiv.classList.remove('iframe-visibility');
+      this.appDiv.classList.remove('expanded')
     }
-    imgMapTrigger.addEventListener('click', () => {
-      if (window.innerWidth <= 850) {
-        // If the window width is below 850px, redirect the user to a new page
-        window.location.href = 'worldMap/world-map.html';
-      } else {
-        // If the window width is above 850px, expand the iframe
-        iframeMapDiv.classList.toggle('iframe-visibility');
-        worldMapDiv.classList.toggle('expanded');
-      }
-    });
-    // Listen for the window resize event
-    window.addEventListener('resize', () => {
-      if (window.innerWidth <= 850) {
-        // If the window width is below 850px, remove the class
-        removeIframeMapVis();
-      }
-    });
-    // Iframe Transparent
+  }
+  handleClick() {
+    if (window.innerWidth <= 850) {
+      // If the window width is below 850px, redirect the user to a new page
+      window.location.href = this.app + '/' + this.app + '.html';
 
-      // Wait for the iframe to load
-        mapIframe.addEventListener("load", () => {
-        // Access the contentDocument of the iframe
-        const iframeDocument = mapIframe.contentDocument || mapIframe.contentWindow.document;
-
+    } else {
+      // If the window width is above 850px, expand the iframe
+      this.iFrameAppDiv.classList.toggle('iframe-visibility');
+      this.appDiv.classList.toggle('expanded');
+    }
+  };
+  handleResize(){
+    if(window.innerWidth <=850)
+      this.removeIframeAppVis()
+  }
+  handleiFrameLoad () {
+    if (this.appiFrame) {
+        const iframeDocument = this.appiFrame.contentDocument || this.appiFrame.contentWindow.document;
         // Modify the background color of the content within the iframe
         const contentBody = iframeDocument.body;
         if (contentBody) {
             contentBody.style.backgroundColor = "transparent"; // Change to your desired color
             contentBody.style.color = "yellow"; // Change to your desired color
-
         }
-      });
+    }
+};
+}
+
+const worldMapApp = new iFrameApp(worldMapDiv,imgMapTrigger,iframeMapDiv,worldMapiFrame,'worldMap')
+const musicPlayerApp = new iFrameApp(musicPlayerDiv,imgMusicPlayerTrigger,iFrameMusicPlayerDiv,musicPlayeriFrame,'musicPlayer')
 
 
 
-      // Add a click event listener to the "Expand" link
+
+//^ -------------END Create classes/re-usabale functions-------------
 
 
-  //  --- Iframe MAP END ---
-
-  //  --- Iframe FLIP START ---
-    // Iframe FLIP visibility
-
-        // Creates a function to remove the visibility and exapnded class
-        function removeIframeFlipVis() {
-          if (iframeFlipDiv) {
-            iframeFlipDiv.classList.remove('iframe-visibility');
-            flipCardDiv.classList.remove('expanded')
-          }
-        }
-        imgFlipTrigger.addEventListener('click', () => {
-          if (window.innerWidth <= 850) {
-            // If the window width is below 850px, redirect the user to a new page
-            window.location.href = 'flipCard/flipCard.html';
-          } else {
-            // If the window width is above 850px, expand the iframe
-            iframeFlipDiv.classList.toggle('iframe-visibility');
-            flipCardDiv.classList.toggle('expanded');
-          }
-        });
-        // Listen for the window resize event
-        window.addEventListener('resize', () => {
-          if (window.innerWidth <= 850) {
-            // If the window width is below 850px, remove the class
-            removeIframeFlipVis();
-          }
-        });
-        window.addEventListener('resize', () => {
-          if (window.innerWidth <= 500) {
-            // If the window width is below 850px, remove the class
-            h1FlipCard.innerHTML = '#2 FlipCard Game'
-          }
-          else{
-            h1FlipCard.innerHTML = '#2 FlipCard Game/WorkInProgress'
-
-          }
-        });
-    // Iframe Transparent
-
-    // Wait for the iframe to load
-      flipIframe.addEventListener("load", () => {
-      // Access the contentDocument of the iframe
-      const iframeDocument = flipIframe.contentDocument || flipIframe.contentWindow.document;
-
-      // Modify the background color of the content within the iframe
-      const contentBody = iframeDocument.body;
-      if (contentBody) {
-          contentBody.style.backgroundColor = "transparent"; // Change to your desired color
-          contentBody.style.color = "yellow"; // Change to your desired color
-
-      }
-    });
-
-
-
-  //  --- Iframe Flip END ---
 
 //  -------- Iframe END --------
 
 // ------ Footer ------
     const socialMedia = document.querySelector("#test")
     const email = document.querySelector(".email")
-    
-      
+
     socialMedia.addEventListener("click", ()=>{
       email.classList.toggle("email-visibility")
     })
