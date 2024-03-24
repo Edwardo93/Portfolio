@@ -299,18 +299,21 @@ body{
 /* ---- World Map & Flip Card Trigger image inside DIV */
 
   #worldMap-img{
+    top: 20px;
     cursor: pointer;
     position: relative;
     height: 120px;
     width: 170px;
   }
   #musicPlayer-img{
+    top: 20px;
     cursor: pointer;
     position: relative;
     height: 180px;
     width: 120px;
   }
   #rollTheDice-img{
+    top: 20px;
     cursor: pointer;
     position: relative;
     height: 130px;
