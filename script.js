@@ -72,13 +72,10 @@ dropbtn.addEventListener('click', () => {
   const flipIframe = document.getElementById("flipIframe")
   const iframeMapDiv = document.querySelector(".iframe-map-container")
   const iframeFlipDiv = document.querySelector(".iframe-flip-container")
-  const expandMap= document.querySelector("#iframe-map")
-  const expandFlip= document.querySelector("#iframe-flip")
   const worldMapDiv= document.querySelector(".world-map-div")
-  const flipCardDiv= document.querySelector(".flip-card-div")
-  const expandLinkMap = document.querySelector('#iframe-map');
-  const expandLinkFlip = document.querySelector('#iframe-flip');
   const imgMapTrigger = document.querySelector('#world-map-img')
+  const flipCardDiv= document.querySelector(".flip-card-div")
+
   const imgFlipTrigger = document.querySelector('#flip-card-img')
   const h1FlipCard = document.querySelector("#h1FlipCard")
 
