@@ -316,7 +316,7 @@ body{
     height: 130px;
     width: 170px;
   }
-  #worldMap-img:hover, #musicPlayer-img:hover, #rollTheDice:hover{
+  #worldMap-img:hover, #musicPlayer-img:hover, #rollTheDice-img:hover{
     transform: scale(1.15);
     transition: 0.2s ease-in-out;
   }
