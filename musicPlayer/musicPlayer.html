@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="musicPlayer.css" />
+    <script
+      src="https://kit.fontawesome.com/5f8613d442.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="circle">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+        <!-- Song IMG and details -->
+        <img src="media/panic-disco-album.png" class="song-img" />
+        <h1>Viva Las Vengeance</h1>
+        <p>Panic! At The Disco</p>
+        <!-- the song list -->
+        <audio id="song">
+          <source src="media/Panic-VivaLas.mp3" type="audio/mpeg" />
+        </audio>
+        <!-- Song Progression bar -->
+        <input type="range" value="0" id="progress" />
+        <!-- Song Controls -->
+        <div class="controls">
+          <div><i class="fa-solid fa-backward"></i></div>
+          <div onclick="playPause()">
+            <i class="fa-solid fa-play" id="ctrlIcon"></i>
+          </div>
+          <div><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+    </div>
+    <!-- ###ICONS are not showing -->
+
+    <script src="musicPlayer.js"></script>
+  </body>
+</html>

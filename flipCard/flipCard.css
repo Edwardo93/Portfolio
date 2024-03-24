@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+body{
+    background-color: black;
+}
+    .flexContainer{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 150px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr ;
+        grid-template-rows: 200px 200px 200px;
+        column-gap:10px;
+        row-gap: 10px;
+        width: 700px;
+        text-align: center;
+    }
+
+    .container div{
+        background-image: url("images/flipCard.png");
+        background-size: 175px 200px;
+        background-repeat: no-repeat;
+        text-align: center;
+        transition: 1.0s;
+        
+    }
+    .container div:active{
+        transform: scale(.9);
+        transition: .1s;
+
+    }
+
+    .container div:hover{
+        cursor: pointer;
+    }
+
+    div .flip-card{
+        transform: rotateY(180deg);
+        background-image: url("images/flippedCard.png");
+    }
+
+/* ----- Responsiveness START ----- */
+@media(max-width: 675px){
+    .container div{
+    background-size: 110px 135px;  
+    }
+
+}
+@media(max-width: 450px){
+    .container div{
+    background-size: 75px 100px;  
+    }
+
+}
+/* ----- Responsiveness END ----- */
