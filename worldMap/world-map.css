@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 700;
+}
+:root{
+    --grey:#3d3c3c;
+    --lightGrey:#827d7dcc;
+    --lightPink:#cf7676cc;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+#name{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 10px 0;
+    font-size: 1rem;
+    border: 3px #913f4d solid;
+    border-radius: 10px;
+    background-color: var(--lightPink);
+    color: white;
+
+}
+#name{
+    padding: 10px 5px;
+}
+
+#timeCont{
+    margin: 10px 0 0 10px;
+    visibility: hidden;
+    font-size: 30px;
+    padding: 0 10px 0;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: var(--lightPink);
+    color: white;
+}
+.choice-card{
+    visibility: hidden;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(98, 171, 156, 0.607);
+    border-radius: 15px;
+    width: 500px;
+    height: 300px;
+}
+
+.choice-card button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 16px;
+    width: 200px;
+    height: 70px;
+    color: var(--grey);
+    border: 2px solid var(--grey);
+    border-radius: 20px;
+}
+.choice-card button:hover{
+    color: var(--lightGrey);
+    border: 3px solid var(--lightGrey);
+    
+}
+.choice-card button:active{
+    font-size: 17px;
+    color: rgba(207, 118, 118, 0.8);
+    border: 2px solid rgba(207, 118, 118, 0.8);
+    transition: 0s;
+}
+
+.choice-card button p{
+    font-size: 16px;
+
+}
+
+.close{
+    position: absolute;
+    margin-left: 465px;
+    margin-top: -265px;
+    text-decoration: none;
+    color: black;
+}
+.close:hover{
+    color: var(--grey);
+}
+.close:active{
+    color:var(--lightPink) ;
+}
+svg{
+    margin-top: -400px;
+    width: 100%;
+}
+svg path{
+    cursor: pointer;
+}
+
+
+/*------------------- The Weather Card ----------------- */
+
+.weatherContainer{
+    margin: auto;
+    position: relative; 
+    display: none;
+
+}
+#weatherCard{
+    margin: 35px auto 0;
+    text-align: center;
+    width: 400px;
+    background: linear-gradient(to right bottom, #47c7e4, #39b6bd,#21a09e, #0e736c);
+    color: white;
+    border-radius: 30px;
+}
+#searchDiv{
+    width: 100%;
+    color: var(--grey);
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-top: 30px;
+}
+#searchInput{
+    font-size: 22px;
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 20px;
+    border: 0;
+    outline: 0;
+    color: var(--grey);
+}
+#searchInput:focus{
+    outline: 3px rgb(130, 125, 125) solid;
+}
+#searchBtn{
+    border: none;
+    color: var(--grey);
+    background-color: white;
+    font-weight: 100;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#searchBtn:hover{
+    border: 3px solid var(--lightGrey);
+}
+#searchBtn:active{
+    border: 2px solid var(--lightPink);
+    color: var(--lightPink) ;
+}
+#backBtn{
+    color: var(--grey);
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+}
+#backBtn:hover{
+    color: var(--lightGrey);
+}
+#backBtn:active{
+ 
+    color: var(--lightPink);
+    }
+.weather-icon{
+    width: 200px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 70px;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.feels-like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.feels-like img{
+    width: 17px;
+    margin-right: 10px;
+}
+.hiLow {
+    display: flex;
+    padding: 0 80px;
+    margin-top: 20px;
+
+}
+p{
+    margin-bottom: 0;
+}
+
+.col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind{
+    font-size: 20px;
+}
+
+
+/* -----Responsiveness START */
