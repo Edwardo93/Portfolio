@@ -296,7 +296,7 @@ body{
 }
 
 
-/* ---- World Map & Flip Card Trigger image inside DIV */
+/* ---- iFrame Trigger images inside DIV */
 
   #worldMap-img{
     top: 20px;
@@ -319,7 +319,14 @@ body{
     height: 130px;
     width: 170px;
   }
-  #worldMap-img:hover, #musicPlayer-img:hover, #rollTheDice-img:hover{
+  #stickyNotes-img{
+    top: 20px;
+    cursor: pointer;
+    position: relative;
+    height: 130px;
+    width: 170px;
+  }
+  #worldMap-img:hover, #musicPlayer-img:hover, #rollTheDice-img:hover, #stickyNotes-img:hover{
     transform: scale(1.15);
     transition: 0.2s ease-in-out;
   }
@@ -370,14 +377,12 @@ body{
         visibility: hidden;
         opacity: 0;
         width: 100%;
-        height: 900px;
+        height: 700px;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: auto; 
-      }
-      .iframe-musicPlayer-container>iframe{
-        transform: translateY(-15%);
+        margin-top: 100px;
       }
   /* ------Music Player game END------ */
 
@@ -399,16 +404,44 @@ body{
       visibility: hidden;
       opacity: 0;
       width: 100%;
-      height: 900px;
+      height: 700px;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: auto; 
+      margin-top: 100px;
     }
     .iframe-rollTheDice-container>iframe{
-      transform: translateY(-15%);
+      /* transform: translateY(15%); */
     }
 /* ------Roll the Dice game END------ */
+
+/* ------Sticky Notes game START------*/
+.stickyNotes-div{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  height: 200px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 200px auto 0;
+}
+/* The "Expand" H2 */
+  .iframe-stickyNotes-container{
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+    margin-top: 100px;
+  }
+
+/* ------Sticky Noptes game END------ */
 
   #footer-hr {
     border: none;
@@ -433,8 +466,8 @@ body{
   footer{
     grid-column-start: 1;
     grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
     margin-top: 300px;
 
     width: 100%;

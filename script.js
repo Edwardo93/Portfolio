@@ -80,6 +80,11 @@ const rollTheDiceDiv= document.querySelector(".rollTheDice-div")
 const imgRollTheDiceTrigger = document.querySelector('#rollTheDice-img')
 const iFrameRollTheDiceDiv = document.querySelector(".iframe-rollTheDice-container")
 const rollTheDiceiFrame = document.getElementById("rollTheDiceiFrame")
+// Sticky Notes const
+const stickyNotesDiv= document.querySelector(".stickyNotes-div")
+const imgStickyNotesTrigger = document.querySelector('#stickyNotes-img')
+const iFrameStickyNotesDiv = document.querySelector(".iframe-stickyNotes-container")
+const stickyNotesiFrame = document.getElementById("stickyNotesiFrame")
  
 //^ -------------START Create classes/re-usabale functions-------------
 class iFrameApp{
@@ -135,6 +140,7 @@ class iFrameApp{
 const worldMapApp = new iFrameApp(worldMapDiv,imgMapTrigger,iframeMapDiv,worldMapiFrame,'worldMap')
 const musicPlayerApp = new iFrameApp(musicPlayerDiv,imgMusicPlayerTrigger,iFrameMusicPlayerDiv,musicPlayeriFrame,'musicPlayer')
 const rollTheDiceApp = new iFrameApp(rollTheDiceDiv,imgRollTheDiceTrigger,iFrameRollTheDiceDiv,rollTheDiceiFrame,'rollTheDice')
+const stickyNotesApp = new iFrameApp(stickyNotesDiv,imgStickyNotesTrigger,iFrameStickyNotesDiv,stickyNotesiFrame,'stickyNotes')
 
 
 
