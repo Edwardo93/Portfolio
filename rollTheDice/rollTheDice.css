@@ -9,7 +9,7 @@ body{
         #000000,
         #011f2f,
         #012327,
-        #1e0101
+        #000000
     )0 100% no-repeat;
     background-size: 100%;
 }
@@ -22,10 +22,10 @@ body{
     top: 50%;
     left: 50%;
     background: linear-gradient(to top,
-    #212020,
-    #094362,
-    #0f3236,
-    #1e0101
+    #000000,
+    #011f2f,
+    #012327,
+    #000000
 )0 100% no-repeat;
     box-shadow: 0 15px 35px rgba(50,50,50,0.15);
     border-radius: 8px;
@@ -55,8 +55,11 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
-button:active{
+button:hover{
     transform: scale(1.05);
+}
+button:active{
+    transform: scale(1);
 }
 .shake{
     animation-name: shake;
