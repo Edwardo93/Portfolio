@@ -55,16 +55,9 @@ dropbtn.addEventListener('click', () => {
 
   });
 
-// Hamburger Menu - Second Bar rotate
-  dropbtn.addEventListener('mouseleave', () => {
-    secondBar.style.transition= '0.5s';
-    secondBar.style.transform= 'rotate(-180deg)';
-    // Change its background color
-  });
-
 // -------- Iframe START--------
 
-// & -----------Adding constants-------------
+// & -----------Linking constants-------------
 // World Map const
 const worldMapDiv= document.querySelector(".worldMap-div")
 const imgMapTrigger = document.querySelector('#worldMap-img')
