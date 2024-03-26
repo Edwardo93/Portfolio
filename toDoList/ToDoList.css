@@ -63,6 +63,12 @@ body{
     color: #ffffff;
     cursor: pointer;
 }
+#newtask button:hover{
+    transform: scale(1.1);
+}
+#newtask button:active{
+    transform: scale(1);
+}
 #tasks{
     background-color: #ffffff;
     padding: 30px 20px;
@@ -92,7 +98,7 @@ body{
     outline: none;
 }
 .task .delete:hover{
-    font-size: 18px;
+    font-size: 19px;
 }
 #tasks_todo li{
     display: flex;
@@ -106,3 +112,6 @@ body{
 #tasks_todo .done{
     text-decoration-line: line-through;
 }
+/* #tasks_todo .done:hover{
+    font-size: 18px;
+} */

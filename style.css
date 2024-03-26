@@ -326,7 +326,14 @@ body{
     height: 150px;
     width: 170px;
   }
-  #worldMap-img:hover, #musicPlayer-img:hover, #rollTheDice-img:hover, #stickyNotes-img:hover{
+  #toDoList-img{
+    top: 20px;
+    cursor: pointer;
+    position: relative;
+    height: 150px;
+    width: 170px;
+  }
+  #worldMap-img:hover, #musicPlayer-img:hover, #rollTheDice-img:hover, #stickyNotes-img:hover,#toDoList-img:hover{
     transform: scale(1.15);
     transition: 0.2s ease-in-out;
   }
@@ -345,7 +352,6 @@ body{
     text-align: center;
     margin: 200px auto 0;
   }
-    /* The "Expand" H2 */
       .iframe-worldMap-container{
         visibility: hidden;
         opacity: 0;
@@ -372,7 +378,6 @@ body{
       text-align: center;
       margin: 200px auto 0;
     }
-    /* The "Expand" H2 */
       .iframe-musicPlayer-container{
         visibility: hidden;
         opacity: 0;
@@ -399,7 +404,6 @@ body{
     text-align: center;
     margin: 200px auto 0;
   }
-  /* The "Expand" H2 */
     .iframe-rollTheDice-container{
       visibility: hidden;
       opacity: 0;
@@ -410,9 +414,6 @@ body{
       align-items: center;
       overflow: auto; 
       margin-top: 100px;
-    }
-    .iframe-rollTheDice-container>iframe{
-      /* transform: translateY(15%); */
     }
 /* ------Roll the Dice game END------ */
 
@@ -429,7 +430,6 @@ body{
   margin: 200px auto 0;
 
 }
-/* The "Expand" H2 */
   .iframe-stickyNotes-container{
     visibility: hidden;
     opacity: 0;
@@ -442,7 +442,36 @@ body{
     overflow: auto; 
   }
 
+
 /* ------Sticky Noptes END------ */
+
+/* ------To Do List Start-------*/
+.toDoList-div{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  height: 200px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 200px auto 0;
+
+}
+  .iframe-toDoList-container{
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    overflow: auto; 
+  }
+
+/* ------To Do List End------ */
+
 
   #footer-hr {
     border: none;
@@ -467,8 +496,8 @@ body{
   footer{
     grid-column-start: 1;
     grid-column-end: 5;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
     margin-top: 300px;
 
     width: 100%;
