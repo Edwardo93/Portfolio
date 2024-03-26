@@ -482,7 +482,7 @@ body{
     height: 5px;
   }
   
-  #footer-hr:after {
+  #footer-hr:after{
     background: red;
     font-size: 18px;
     content: 'ἐ';
