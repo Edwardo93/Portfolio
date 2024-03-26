@@ -112,6 +112,3 @@ body{
 #tasks_todo .done{
     text-decoration-line: line-through;
 }
-/* #tasks_todo .done:hover{
-    font-size: 18px;
-} */
