@@ -25,6 +25,45 @@ body {
   font-family: var(--font-main);
   line-height: 1.6;
   overflow-x: hidden;
+  cursor: none;
+  /* Hide default cursor */
+}
+
+/* Force hide cursor on all interactive elements */
+a,
+button,
+input,
+textarea,
+select,
+.btn,
+.project-card,
+.skill-pill {
+  cursor: none !important;
+}
+
+/* ... existing styles ... */
+
+/* Custom circle cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00eaff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  mix-blend-mode: difference;
+  /* Techy effect */
+}
+
+.custom-cursor.hovered {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 234, 255, 0.2);
+  border-color: #00eaff;
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
 }
 
 h1,
@@ -499,4 +538,29 @@ button {
 .footer p {
   color: #666;
   font-size: 0.9rem;
+}
+
+/* Custom circle cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00eaff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  /* Only transition visual properties, NOT position (left/top) to avoid lag */
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  mix-blend-mode: difference;
+  will-change: width, height, left, top;
+  /* Hint to browser for optimization */
+}
+
+.custom-cursor.hovered {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 234, 255, 0.3);
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
 }

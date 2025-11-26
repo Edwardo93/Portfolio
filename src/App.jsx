@@ -3,6 +3,70 @@ import { useState, useEffect, useRef } from 'react'
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const cursor = document.createElement("div");
+    cursor.classList.add("custom-cursor");
+    document.body.appendChild(cursor);
+
+    // Use requestAnimationFrame for smoother visual updates
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+    let isMoving = false;
+
+    const moveCursor = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (!isMoving) {
+        isMoving = true;
+        requestAnimationFrame(updateCursorPosition);
+      }
+    };
+
+    const updateCursorPosition = () => {
+      // Simple linear interpolation (lerp) for smoother follow, or direct assignment for instant
+      // For "laggy" complaints, direct assignment is often better unless they want a "trailing" effect.
+      // Let's stick to direct assignment but inside rAF to sync with refresh rate.
+      cursor.style.left = `${mouseX}px`;
+      cursor.style.top = `${mouseY}px`;
+      isMoving = false;
+    };
+
+    const addHoverClass = () => cursor.classList.add("hovered");
+    const removeHoverClass = () => cursor.classList.remove("hovered");
+
+    window.addEventListener("mousemove", moveCursor);
+
+    // Optimized delegation for hover effects
+    const handleHover = (e) => {
+      // Check if target or any parent is clickable
+      const clickable = e.target.closest('a, button, .project-card, .skill-pill');
+      if (clickable) {
+        addHoverClass();
+      } else {
+        removeHoverClass();
+      }
+    };
+
+    document.addEventListener('mouseover', handleHover);
+    document.addEventListener('mouseout', (e) => {
+      if (!e.relatedTarget || !e.relatedTarget.closest('a, button, .project-card, .skill-pill')) {
+        removeHoverClass();
+      }
+    });
+
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+      document.removeEventListener('mouseover', handleHover);
+      document.removeEventListener('mouseout', handleHover); // Clean up both
+      if (document.body.contains(cursor)) {
+        document.body.removeChild(cursor);
+      }
+    };
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
