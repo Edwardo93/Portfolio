@@ -117,7 +117,7 @@ function App() {
           <span className="hero-label">Hi, I'm Eduard</span>
           <h1>Junior Web Developer with<br />Real Client Experience</h1>
           <p>
-            I build fast, conversion-focused websites for small businesses using HTML, CSS, JavaScript, Wix and WordPress. Available for junior roles, contract or part-time work.
+            I build fast, conversion-focused websites for small businesses using HTML, CSS, JavaScript, Wix and WordPress. Available for junior roles.
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">View My Work</a>
