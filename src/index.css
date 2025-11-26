@@ -468,10 +468,53 @@ button {
 } */
 
 /* Responsive adjustments */
+/* Responsive adjustments */
 @media (max-width: 768px) {
+
+  /* Reset cursor for mobile/touch */
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  .btn,
+  .project-card,
+  .skill-pill {
+    cursor: auto !important;
+  }
+
+  .custom-cursor {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer !important;
+    /* Ensure it's clickable on mobile */
+    z-index: 1001;
+  }
+
   .nav-links {
     display: none;
-    /* Simple mobile hide for now, can enhance later */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
   }
 
   .hero-section h1 {
