@@ -156,12 +156,20 @@ button {
 }
 
 .logo {
-  font-family: var(--font-heading);
+  font-family: "Sarina", cursive;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--accent-color);
+  color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-color) !important;
 }
 
 .nav-links {

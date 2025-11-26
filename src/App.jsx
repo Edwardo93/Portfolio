@@ -87,7 +87,7 @@ function App() {
       {/* Navigation */}
       <nav className="navbar">
         <div className="container nav-container">
-          <div className="logo">Eduard</div>
+          <div className="logo">E<span className="dot"></span>P<span className="dot"></span></div>
           <button className="menu-toggle" onClick={toggleMenu}>
             {isMenuOpen ? '✕' : '☰'}
           </button>
