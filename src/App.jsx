@@ -292,7 +292,7 @@ function App() {
         <div className="container">
           <h2>Let's Work Together</h2>
           <p>
-            I'm currently available for junior developer roles, contract work, or freelance projects. If you're looking for someone who is eager to learn and ready to contribute, I'd love to hear from you.
+            I'm currently available for junior developer roles. If you're looking for someone who is eager to learn and ready to contribute, I'd love to hear from you.
           </p>
           <div className="contact-links">
             <a href="mailto:eduard.proca93@gmail.com" className="btn btn-primary">Email Me</a>
