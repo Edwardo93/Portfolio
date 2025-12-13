@@ -146,14 +146,15 @@ function App() {
           <source src="https://video.wixstatic.com/video/11062b_b02d1b7883d5447fb2453acb93a5102b/1080p/mp4/file.mp4" type="video/mp4" />
         </video>
         <div className="container">
-          {hrName && (
+          {hrName ? (
             <div style={{ marginBottom: "0.5rem" }}>
-              <span className="hero-label">
+              <span className="hero-label-name">
                 Hello {hrName}
               </span>
+              <div><span className="hero-label">I'm Eduard</span></div>
             </div>
-          )}
-          <span className="hero-label">Hi, I'm Eduard</span>
+          ) : <span className="hero-label">Hi, I'm Eduard</span>}
+          {/* <span className="hero-label">Hi, I'm Eduard</span> */}
           <h1>Junior Web Developer with<br />Real Client Experience</h1>
           <p>
             I build fast, conversion-focused websites for small businesses using HTML, CSS, JavaScript, Wix and WordPress. Available for junior roles.
