@@ -1,7 +1,39 @@
 import { useState, useEffect, useRef } from 'react'
 
+const PARAM_KEYS = [
+  "UTM_HR_NAME",
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+  "ref",
+];
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [params, setParams] = useState({});
+  const [hrName, setHrName] = useState(null);
+
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const collected = {};
+
+    PARAM_KEYS.forEach((key) => {
+      const value = sp.get(key);
+
+      // define ALL params, even if missing
+      collected[key] = value ?? null;
+
+      // store only if it exists
+      if (value) {
+        localStorage.setItem(key, value);
+      }
+    });
+
+    setParams(collected);
+    setHrName(collected.UTM_HR_NAME);
+  }, []);
 
   useEffect(() => {
     const cursor = document.createElement("div");
@@ -114,6 +146,13 @@ function App() {
           <source src="https://video.wixstatic.com/video/11062b_b02d1b7883d5447fb2453acb93a5102b/1080p/mp4/file.mp4" type="video/mp4" />
         </video>
         <div className="container">
+          {hrName && (
+            <div style={{ marginBottom: "0.5rem" }}>
+              <span className="hero-label">
+                Hello {hrName}
+              </span>
+            </div>
+          )}
           <span className="hero-label">Hi, I'm Eduard</span>
           <h1>Junior Web Developer with<br />Real Client Experience</h1>
           <p>
