@@ -1,11 +1,19 @@
 import { useState, useEffect, useRef } from 'react'
 // import { trackClick } from './main';
+// const trackClick = (label) => {
+//   window.gtag('event', 'click', {
+//     event_category: 'CTA',
+//     event_label: label,
+//   });
+// };
+
 const trackClick = (label) => {
-  window.gtag('event', 'click', {
-    event_category: 'CTA',
-    event_label: label,
+  window.gtag('event', 'cta_click', {
+    cta_name: label,
+    page_path: window.location.pathname,
   });
 };
+
 const PARAM_KEYS = [
   "UTM_HR_NAME",
   "utm_source",
@@ -236,7 +244,7 @@ function App() {
             <p>
               I constantly learn new technologies and tools to keep my skills sharp. Here are some of the key areas I focus on.
             </p>
-            <a href="#contact" className="btn btn-primary">Let's Talk</a>
+            <a href="#contact" className="btn btn-primary" onClick={() => trackClick('Let\'s Talk')}>Let's Talk</a>
           </div>
           <div className="skills-grid">
             <div className="skills-category">
