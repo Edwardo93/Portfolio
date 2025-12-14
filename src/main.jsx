@@ -16,3 +16,10 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+const trackClick = (label) => {
+  window.gtag('event', 'click', {
+    event_category: 'CTA',
+    event_label: label,
+  });
+};

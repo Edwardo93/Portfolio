@@ -1,5 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
-
+// import { trackClick } from './main';
+const trackClick = (label) => {
+  window.gtag('event', 'click', {
+    event_category: 'CTA',
+    event_label: label,
+  });
+};
 const PARAM_KEYS = [
   "UTM_HR_NAME",
   "utm_source",
@@ -160,8 +166,8 @@ function App() {
             I build fast, conversion-focused websites for small businesses using HTML, CSS, JavaScript, Wix and WordPress. Available for junior roles.
           </p>
           <div className="hero-buttons">
-            <a href="#projects" className="btn btn-primary">View My Work</a>
-            <a href="#" className="btn btn-secondary">Download My CV</a>
+            <a href="#projects" className="btn btn-primary" onClick={() => trackClick('View My Work')}>View My Work</a>
+            <a href="#" className="btn btn-secondary" onClick={() => trackClick('Download My CV')}>Download My CV</a>
           </div>
         </div>
       </section>
@@ -181,7 +187,7 @@ function App() {
                 <span className="tech-tag">Figma</span>
                 <span className="tech-tag">JS</span>
               </div>
-              <a href="https://www.auraprocosmetics.com/" className="project-link">View Project &rarr;</a>
+              <a href="https://www.auraprocosmetics.com/" className="project-link" onClick={() => trackClick('View AuraProCosmetics')}>View Project &rarr;</a>
             </div>
 
             {/* Project 2 */}
@@ -193,7 +199,7 @@ function App() {
                 <span className="tech-tag">Figma</span>
                 <span className="tech-tag">CSS</span>
               </div>
-              <a href="https://www.txengo.com/" className="project-link">View Project &rarr;</a>
+              <a href="https://www.txengo.com/" className="project-link" onClick={() => trackClick('View Txengo')}>View Project &rarr;</a>
             </div>
 
             {/* Project 3 */}
@@ -205,7 +211,7 @@ function App() {
                 <span className="tech-tag">Wix CMS</span>
                 <span className="tech-tag">Figma</span>
               </div>
-              <a href="https://www.thememorycorners.co.uk/" className="project-link">View Project &rarr;</a>
+              <a href="https://www.thememorycorners.co.uk/" className="project-link" onClick={() => trackClick('View TheMemoryCorners')}>View Project &rarr;</a>
             </div>
             {/* Project 4 */}
             <div className="project-card">
@@ -216,7 +222,7 @@ function App() {
                 <span className="tech-tag">Figma</span>
                 <span className="tech-tag">phpMyAdmin</span>
               </div>
-              <a href="https://www.sayidoweddings.co.uk/" className="project-link">View Project &rarr;</a>
+              <a href="https://www.sayidoweddings.co.uk/" className="project-link" onClick={() => trackClick('View SayidoWeddings')}>View Project &rarr;</a>
             </div>
           </div>
         </div>
@@ -335,8 +341,8 @@ function App() {
             I'm currently available for junior developer roles. If you're looking for someone who is eager to learn and ready to contribute, I'd love to hear from you.
           </p>
           <div className="contact-links">
-            <a href="mailto:eduard.proca93@gmail.com" className="btn btn-primary">Email Me</a>
-            <a href="Https://www.linkedin.com/in/eduard-p-34a06b232" className="linkedin-link">Connect on LinkedIn</a>
+            <a href="mailto:eduard.proca93@gmail.com" className="btn btn-primary" onClick={() => trackClick('Email Me')}>Email Me</a>
+            <a href="Https://www.linkedin.com/in/eduard-p-34a06b232" className="linkedin-link" onClick={() => trackClick('Connect on LinkedIn')}>Connect on LinkedIn</a>
           </div>
         </div>
       </section>
