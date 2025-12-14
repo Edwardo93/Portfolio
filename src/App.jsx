@@ -188,7 +188,12 @@ function App() {
             {/* Project 1 */}
             <div className="project-card">
               <h3>E-commerce Startup</h3>
-              <p>Developed a e-commerce site for a reseller, focusing on a seamless UX from browsing to checkout. Implemented key features including categorization, secure payment, and inventory management.</p>
+              <ul>
+                <li>Built a reseller e-commerce website with a strong focus on UX</li>
+                <li>Smooth journey from product discovery to checkout</li>
+                <li>Implemented product categorisation, secure payments, and inventory management</li>
+              </ul>
+              {/* <p>Developed a e-commerce site for a reseller, focusing on a seamless UX from browsing to checkout. Implemented key features including categorization, secure payment, and inventory management.</p> */}
               <div className="tech-stack">
                 <span className="tech-tag">Wix</span>
                 <span className="tech-tag">Wix CMS</span>
@@ -201,7 +206,12 @@ function App() {
             {/* Project 2 */}
             <div className="project-card">
               <h3>Creative Design Agency</h3>
-              <p>Developed a visually bold website that highlights work through large imagery, subtle animations, and a modern, grid-based layout.</p>
+              <ul>
+                <li>Designed a bold, modern website focused on visual storytelling</li>
+                <li>Large imagery, subtle animations, and clean grid-based layout</li>
+                <li>Optimised to showcase projects and creative work</li>
+              </ul>
+              {/* <p>Developed a visually bold website that highlights work through large imagery, subtle animations, and a modern, grid-based layout.</p> */}
               <div className="tech-stack">
                 <span className="tech-tag">Framer</span>
                 <span className="tech-tag">Figma</span>
@@ -213,24 +223,53 @@ function App() {
             {/* Project 3 */}
             <div className="project-card">
               <h3>Events Company 1</h3>
-              <p>Redesigned the site with a modern, elegant layout focused on visuals and simplicity — helping clients explore photo booth options, view real event galleries, and book directly online with ease.</p>
+              <ul>
+                <li>Redesigned the website with a modern, elegant layout</li>
+                <li>Improved content flow for galleries and service discovery</li>
+                <li>Enabled direct online enquiries and bookings</li>
+              </ul>
+              {/* <p>Redesigned the site with a modern, elegant layout focused on visuals and simplicity — helping clients explore photo booth options, view real event galleries, and book directly online with ease.</p> */}
               <div className="tech-stack">
                 <span className="tech-tag">Wix</span>
                 <span className="tech-tag">Wix CMS</span>
-                <span className="tech-tag">Figma</span>
+                <span className="tech-tag">UX Pilot</span>
               </div>
               <a href="https://www.thememorycorners.co.uk/" className="project-link" onClick={() => trackClick('View TheMemoryCorners')}>View Project &rarr;</a>
             </div>
             {/* Project 4 */}
             <div className="project-card">
               <h3>Events Company 2 (In Progress) </h3>
-              <p>Developed a soft, romantic design with modern touches that highlights testimonials, services, and past events — making it easy for couples to connect and start planning their big day.</p>
+              <ul>
+                <li>Soft, romantic visual direction with modern UI details</li>
+                <li>Focus on testimonials, galleries, and conversion flow</li>
+                <li>Currently under development...</li>
+              </ul>
+              {/* <p>Developed a soft, romantic design with modern touches that highlights testimonials, services, and past events — making it easy for couples to connect and start planning their big day.</p> */}
               <div className="tech-stack">
                 <span className="tech-tag">WordPress</span>
                 <span className="tech-tag">Figma</span>
                 <span className="tech-tag">phpMyAdmin</span>
               </div>
               <a href="https://www.sayidoweddings.co.uk/" className="project-link" onClick={() => trackClick('View SayidoWeddings')}>View Project &rarr;</a>
+            </div>
+            {/* Project 5 */}
+            <div className="project-card">
+              <h3>Hospitality Booking System</h3>
+              <ul>
+                <li>Custom booking system built with a hybrid Wix + custom code approach</li>
+                <li>Dynamic pricing based on age criteria and capacity rules</li>
+                <li>Payment validation to confirm or cancel bookings automatically</li>
+                <li>Automated slot release via cron jobs for unconfirmed holds</li>
+              </ul>
+              {/* <p>Created a booking system for a hospitality business with on demands UX. The booking system has been developed in a hybrid apporach which means it was built using Wix's existing booking calendar, with custom code to manipulate the booking price based on age crietion, to accept and cancel bookings based on payment validation and to allow multiples users booking the same slot until it gets booked out.
+                The payment required API integrations. The system also benefits of a cron job to release slotsl that are on hold and niether declined or confirmed  </p> */}
+              <div className="tech-stack">
+                <span className="tech-tag">Wix</span>
+                <span className="tech-tag">Wix CMS</span>
+                <span className="tech-tag">Wix Velo(JS)</span>
+                <span className="tech-tag">RESTful API</span>
+              </div>
+              <a href="https://www.thebusstop.scot/experiences" className="project-link" onClick={() => trackClick('View TheBusStop')}>View Project &rarr;</a>
             </div>
           </div>
         </div>

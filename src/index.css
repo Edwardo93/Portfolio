@@ -83,9 +83,20 @@ a {
   transition: color 0.3s ease;
 }
 
-ul {
-  list-style: none;
+.nav-links {
+  list-style-type: none;
 }
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+li {
+  color: #afaeae;
+}
+
+
 
 button {
   cursor: pointer;
