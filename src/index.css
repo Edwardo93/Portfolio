@@ -115,6 +115,9 @@ button {
 }
 
 .btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--accent-color);
   color: #000;
 }
