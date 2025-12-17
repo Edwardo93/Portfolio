@@ -15,13 +15,14 @@ const trackClick = (label) => {
 };
 
 const PARAM_KEYS = [
-  "UTM_HR_NAME",
-  "utm_source",
-  "utm_medium",
-  "utm_campaign",
-  "utm_term",
-  "utm_content",
-  "ref",
+  "UTM_NAME",
+  "UTM_COMPANY",
+  "UTM_INDUSTRY",
+  "UTM_SOURCE",
+  "UTM_MEDIUM",
+  "UTM_CAMPAIGN",
+  "UTM_TERM",
+  "UTM_CONTENT"
 ];
 
 function App() {
