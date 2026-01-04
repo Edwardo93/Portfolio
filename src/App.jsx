@@ -343,8 +343,10 @@ function App() {
             </div>
 
             <div className="skills-category">
-              <h3>Version Control</h3>
+              <h3>Version ControlVersion Control, CI/CD & Deployment</h3>
               <div className="skills-list">
+                <span className="skill-pill">CI/CD principles</span>
+                <span className="skill-pill">End-to-End Delivery Workflows</span>
                 <span className="skill-pill">Git</span>
               </div>
             </div>
