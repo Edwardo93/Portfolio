@@ -251,7 +251,7 @@ function App() {
             </div>
             {/* Project 5 */}
             <div className="project-card">
-              <h3>Events Company 2 (In Progress) </h3>
+              <h3>Events Company 2</h3>
               <ul>
                 <li>Soft, romantic visual direction with modern UI details</li>
                 <li>Focus on testimonials, galleries, and conversion flow</li>
@@ -263,7 +263,7 @@ function App() {
                 <span className="tech-tag">Figma</span>
                 <span className="tech-tag">phpMyAdmin</span>
               </div>
-              <a href="https://www.sayidoweddings.co.uk/" className="project-link" onClick={() => trackClick('View SayidoWeddings')}>View Project &rarr;</a>
+              <a href="https://www.sayidoweddings.co.uk/home" className="project-link" onClick={() => trackClick('View SayidoWeddings')}>View Project &rarr;</a>
             </div>
 
           </div>
