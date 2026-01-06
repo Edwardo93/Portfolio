@@ -273,7 +273,7 @@ button {
   font-weight: 600;
   color: var(--accent-color);
   margin-bottom: 1rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   background: rgba(0, 243, 255, 0.1);
   padding: 0.5rem 1rem;
