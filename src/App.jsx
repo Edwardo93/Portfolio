@@ -1,11 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-// import { trackClick } from './main';
-// const trackClick = (label) => {
-//   window.gtag('event', 'click', {
-//     event_category: 'CTA',
-//     event_label: label,
-//   });
-// };
 
 const trackClick = (label) => {
   window.gtag('event', 'cta_click', {
@@ -47,7 +40,7 @@ function App() {
     });
 
     setParams(collected);
-    setHrName(collected.UTM_HR_NAME);
+    setHrName(collected.UTM_NAME);
   }, []);
 
   useEffect(() => {
@@ -293,8 +286,8 @@ function App() {
               <div className="skills-list">
                 <span className="skill-pill">JavaScript</span>
                 <span className="skill-pill">Python</span>
-                <span className="skill-pill">HTML5</span>
-                <span className="skill-pill">CSS3</span>
+                <span className="skill-pill">HTML</span>
+                <span className="skill-pill">CSS</span>
               </div>
             </div>
 
